@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-header-font;
+  }
+
+  h1 {
+    @apply text-3xl lg:text-4xl;
+  }
+
+  h2 {
+    @apply text-3xl lg:text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+
+  h4 {
+    @apply text-lg;
+  }
+
+  body {
+    @apply font-body-font text-base;
+  }
+
+  p {
+    @apply leading-[24px];
+  }
+}
+
+@layer components {
+  .primary-btn {
+    @apply w-max py-2 px-4 border-none outline-none font-header-font font-normal text-base rounded-lg transition-colors ease-out duration-300 flex items-center justify-center bg-primary-color text-neutral-50 hover:bg-[#41A7F1];
+  }
+  .outline-btn {
+    @apply w-max py-2 px-4 border border-primary-color outline-none font-header-font font-normal text-base rounded-lg transition-colors ease-out duration-300 flex items-center justify-center bg-transparent text-primary-color hover:text-[#41A7F1] hover:border-[#41A7F1];
+  }
+
+  .max-container {
+    @apply max-w-7xl mx-4 md:mx-6 lg:mx-8 min-[1120px]:mx-8 xl:mx-auto;
+  }
+}
