@@ -26,6 +26,13 @@ export function CartProvider({ children }) {
   const [productAdded, setProductAdded] = useState(false);
   const [productRemoved, setProductRemoved] = useState(false);
 
+  // for cart drawer
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleCart = () => {
+    setIsOpen((prevState) => !prevState);
+  };
+
   const addToCart = (item) => {
     const isItemInCart = cartItems.find((cartItem) => cartItem.id === item.id); // Returns true if item already in cart
 
@@ -59,6 +66,7 @@ export function CartProvider({ children }) {
         progress: undefined,
         theme: "light",
       });
+      setIsOpen(true);
     }
   };
 
@@ -142,6 +150,8 @@ export function CartProvider({ children }) {
         productRemoved,
         increaseQuantity,
         decreaseQuantity,
+        toggleCart,
+        isOpen,
       }}
     >
       {children}

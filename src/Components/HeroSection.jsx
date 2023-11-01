@@ -19,6 +19,13 @@ const HeroSection = () => {
       image: "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_.jpg",
       brand: "Samsung",
     },
+    {
+      id: 16,
+      title: "Acer SB220Q bi 21.5 inches Full HD (1920 x 1080) IPS Ultra-Thin",
+      category: "electronics",
+      image: "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_.jpg",
+      brand: "Acer",
+    },
   ];
 
   const categoryProducts = [
@@ -45,7 +52,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <div className="flex gap-4 my-4">
+    <div className="flex flex-col md:flex-row gap-4 my-4">
       <HeroProducts heroProducts={heroProducts} />
       <Categories categoryProducts={categoryProducts} />
     </div>

@@ -8,6 +8,8 @@ const HomePage = () => {
   const [searchValue, setSearchValue] = useState("");
   const products = useProductsContext();
 
+  
+
   return (
     <div className="home-page flex flex-col max-container">
       <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} />

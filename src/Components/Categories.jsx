@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Categories = ({ categoryProducts }) => {
   return (
-    <div className="category w-3/12 p-4 ms-auto rounded-sm border bg-gradient-to-br from-neutral-200 from-10% via-neutral-100 via-30% to-white">
+    <div className="category w-full md:w-3/12 p-4 ms-auto rounded-sm border bg-gradient-to-br from-neutral-200 from-10% via-neutral-100 via-30% to-white">
       <h4>Latest products</h4>
       <div className="mt-4 category-products-container grid grid-cols-2 gap-4">
         {categoryProducts.map((product) => (

@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 const HeroProducts = ({ heroProducts }) => {
   return (
-    <div className="w-3/4 carousel">
+    <div className="w-full md:w-3/4 carousel">
       <Swiper
         navigation={true}
         modules={[Navigation, Autoplay]}
@@ -23,7 +23,7 @@ const HeroProducts = ({ heroProducts }) => {
       >
         {heroProducts.map((product) => (
           <SwiperSlide key={product.id}>
-            <div className="hero-card bg-gradient-to-br from-neutral-200 from-10% via-neutral-100 via-30% to-white h-[280px] flex gap-6 select-none border px-6 py-4 rounded-sm">
+            <div className="hero-card flex gap-6 flex-col-reverse sm:flex-row min-h-[275px] bg-gradient-to-br from-neutral-200 from-10% via-neutral-100 via-30% to-white select-none border px-6 py-4 rounded-sm">
               <div className="product-details flex flex-col">
                 <div className="bg-yellow-100 w-max px-2 rounded-sm shadow-md select-none">
                   <span className="text-yellow-900">Lowest ever price!</span>
@@ -37,9 +37,9 @@ const HeroProducts = ({ heroProducts }) => {
                   <p className="text-textBlack ">{product.brand}</p>
                 </div>
               </div>
-              <figure className="product-image">
+              <figure className="product-image mx-auto sm:max-0">
                 <img
-                  className="max-w-xs h-auto object-cover"
+                  className="w-full max-w-xs h-auto object-cover"
                   src={product.image}
                   alt={product.title}
                 />

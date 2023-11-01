@@ -2,7 +2,7 @@ import { LuSearch } from "react-icons/lu";
 
 const SearchBar = ({ searchValue, setSearchValue }) => {
   return (
-    <div className="search-bar ms-auto flex mt-4">
+    <div className="search-bar w-full sm:max-w-[332px] sm:ms-auto flex mt-4">
       <div className="search-icon cursor-default w-8">
         <LuSearch
           size={18}
@@ -12,7 +12,7 @@ const SearchBar = ({ searchValue, setSearchValue }) => {
       <input
         value={searchValue}
         onChange={(e) => setSearchValue(e.target.value)}
-        className="px-2 py-1 min-w-[300px] text-textBlack dark:text-textWhite bg-transparent rounded-r-lg border border-neutral-500 border-l-0 outline-none"
+        className="px-2 py-1 w-full text-textBlack dark:text-textWhite bg-transparent rounded-r-lg border border-neutral-500 border-l-0 outline-none"
         placeholder="search..."
         type="text"
         id="searchBar"
